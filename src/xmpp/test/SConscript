@@ -34,8 +34,8 @@ env.Prepend(LIBS = ['task_test', 'gunit', 'xmpp', 'xml', 'pugixml', 'sandesh',
 if sys.platform != 'darwin':
     env.Append(LIBS = ['rt'])
 
-xmpp_server_test = env.UnitTest('xmpp_server_test', ['xmpp_server_test.cc'])
-env.Alias('controller/xmpp:xmpp_server_test', xmpp_server_test)
+#xmpp_server_test = env.UnitTest('xmpp_server_test', ['xmpp_server_test.cc'])
+#env.Alias('controller/xmpp:xmpp_server_test', xmpp_server_test)
 
 xmpp_regex_test = env.UnitTest('xmpp_regex_test', ['xmpp_regex_test.cc'])
 env.Alias('controller/xmpp:xmpp_regex_test', xmpp_regex_test)
@@ -46,8 +46,8 @@ env.Alias('controller/xmpp:xmpp_pubsub_test', xmpp_pubsub_test)
 xmpp_pubsub_client = env.UnitTest('xmpp_pubsub_client', ['xmpp_pubsub_client.cc'])
 env.Alias('controller/xmpp:xmpp_pubsub_client', xmpp_pubsub_client)
 
-xmpp_session_test = env.UnitTest('xmpp_session_test', ['xmpp_session_test.cc'])
-env.Alias('controller/xmpp:xmpp_session_test', xmpp_session_test)
+#xmpp_session_test = env.UnitTest('xmpp_session_test', ['xmpp_session_test.cc'])
+#env.Alias('controller/xmpp:xmpp_session_test', xmpp_session_test)
 
 xmpp_client_standalone_test = env.UnitTest('xmpp_client_standalone_test',
                                            ['xmpp_client_standalone.cc'])
@@ -85,11 +85,12 @@ test_suite = [
     xmpp_pubsub_test,
     xmpp_regex_test,
     xmpp_server_sm_test,
-    xmpp_server_test,
-    xmpp_session_test,
     xmpp_server_auth_sm_test,
     xmpp_client_auth_sm_test
 ]
+
+#xmpp_server_test,
+#xmpp_session_test,
 
 flaky_test_suite = [
     xmpp_stream_message_client_test,

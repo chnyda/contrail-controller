@@ -208,9 +208,9 @@ bgp_multicast_test = env.UnitTest('bgp_multicast_test',
                                   ['bgp_multicast_test.cc'])
 env.Alias('src/bgp:bgp_multicast_test', bgp_multicast_test)
 
-bgp_peer_close_gr_test = except_env.UnitTest('bgp_peer_close_gr_test',
-                                          ['bgp_peer_close_gr_test.cc'])
-env.Alias('src/bgp:bgp_peer_close_gr_test', bgp_peer_close_gr_test)
+#bgp_peer_close_gr_test = except_env.UnitTest('bgp_peer_close_gr_test',
+#                                          ['bgp_peer_close_gr_test.cc'])
+#env.Alias('src/bgp:bgp_peer_close_gr_test', bgp_peer_close_gr_test)
 
 bgp_peer_close_test = except_env.UnitTest('bgp_peer_close_test',
                                           ['bgp_peer_close_test.cc'])
@@ -346,22 +346,22 @@ bgp_xmpp_wready_test = env.UnitTest('bgp_xmpp_wready_test',
                              ['bgp_xmpp_wready_test.cc'])
 env.Alias('src/bgp:bgp_xmpp_wready_test', bgp_xmpp_wready_test)
 
-graceful_restart_flap_all_test = except_env.UnitTest(
-    'graceful_restart_flap_all_test', ['graceful_restart_flap_all_test.cc'])
-env.Alias('src/bgp:graceful_restart_flap_all_test',
-          graceful_restart_flap_all_test)
+#graceful_restart_flap_all_test = except_env.UnitTest(
+#    'graceful_restart_flap_all_test', ['graceful_restart_flap_all_test.cc'])
+#env.Alias('src/bgp:graceful_restart_flap_all_test',
+#          graceful_restart_flap_all_test)
 
-graceful_restart_flap_some_test = except_env.UnitTest(
-    'graceful_restart_flap_some_test',
-    ['graceful_restart_flap_some_test.cc'])
-env.Alias('src/bgp:graceful_restart_flap_some_test',
-           graceful_restart_flap_some_test)
+#graceful_restart_flap_some_test = except_env.UnitTest(
+#    'graceful_restart_flap_some_test',
+#    ['graceful_restart_flap_some_test.cc'])
+#env.Alias('src/bgp:graceful_restart_flap_some_test',
+#           graceful_restart_flap_some_test)
 
-graceful_restart_instance_config_test = except_env.UnitTest(
-    'graceful_restart_instance_config_test',
-    ['graceful_restart_instance_config_test.cc'])
-env.Alias('src/bgp:graceful_restart_instance_config_test',
-          graceful_restart_instance_config_test)
+#graceful_restart_instance_config_test = except_env.UnitTest(
+#    'graceful_restart_instance_config_test',
+#    ['graceful_restart_instance_config_test.cc'])
+#env.Alias('src/bgp:graceful_restart_instance_config_test',
+#          graceful_restart_instance_config_test)
 
 path_resolver_test = env.UnitTest('path_resolver_test',
                                   ['path_resolver_test.cc'])
@@ -579,7 +579,6 @@ test_suite = [
     bgp_membership_test,
     bgp_msg_builder_test,
     bgp_multicast_test,
-    bgp_peer_close_gr_test,
     bgp_peer_close_test,
     bgp_peer_test,
     bgp_proto_test,
@@ -601,7 +600,6 @@ test_suite = [
     bgp_update_rx_test,
     bgp_update_test,
     bgp_update_sender_test,
-    bgp_xmpp_basic_test,
     bgp_xmpp_channel_test,
     bgp_xmpp_deferq_test,
     bgp_xmpp_evpn_mcast_test,
@@ -614,9 +612,6 @@ test_suite = [
     bgp_xmpp_rtarget_manager_test,
     bgp_xmpp_test,
     bgp_xmpp_wready_test,
-    graceful_restart_flap_all_test,
-    graceful_restart_flap_some_test,
-    graceful_restart_instance_config_test,
     path_resolver_test1,
     path_resolver_test2,
     peer_close_manager_test,
@@ -658,6 +653,11 @@ test_suite = [
     xmpp_message_builder_test,
     xmpp_sess_toggle_test,
 ]
+#bgp_peer_close_gr_test,
+#graceful_restart_flap_all_test,
+#graceful_restart_flap_some_test,
+#graceful_restart_instance_config_test,
+#bgp_xmpp_basic_test,
 
 test = env.TestSuite('bgp-test', test_suite)
 
